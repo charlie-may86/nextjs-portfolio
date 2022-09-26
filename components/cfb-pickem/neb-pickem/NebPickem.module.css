@@ -1,0 +1,86 @@
+.schedule {
+  margin: 5% 20%;
+}
+
+.gameWeek {
+  display: flex;
+  flex-direction: row;
+}
+
+.gameWeek div {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.gameWeek:nth-child(even) {
+  background-color: lightgray;
+}
+/* 
+.gameWeek div:last-child {
+  background-color: white;
+} */
+
+.heading {
+  display: flex;
+}
+
+.heading div {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.buttonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.pickEm {
+  box-shadow: 0px 1px 0px 0px #9fb4f2;
+  background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+  background-color: #7892c2;
+  border-radius: 6px;
+  border: 1px solid #4e6096;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 2px auto;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
+  min-width: 40%;
+}
+
+.pickEm:hover {
+  background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+  background-color: #476e9e;
+}
+.pickEm:active {
+  position: relative;
+  top: 1px;
+}
+
+.pick {
+  display: flex;
+  flex-direction: row;
+  margin-right: 80%;
+  margin-left: 5px;
+}
+
+.pick div {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.submitPicksButton {
+  margin-left: 3px;
+}
