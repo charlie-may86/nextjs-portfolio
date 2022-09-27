@@ -1,6 +1,6 @@
 import React from "react";
 import SquareContext from "../../../context/SquareContext";
-import {useAnswerContext} from "../../../context/AnswerContext";
+import { useAnswerContext } from "../../../context/AnswerContext";
 import squareClick from "../logic/SquareClick";
 import styles from "./ChessBoard.module.css";
 
@@ -11,10 +11,10 @@ const ChessBoard = () => {
   let board = [];
 
   //   const whichSquare = useContext(SquareContext);
-  const { handleThis } = useAnswerContext();
+  const value = useAnswerContext();
 
   const handleClick = (e) => {
-    squareClick(e,whichSquare, value, handleClick);
+    squareClick(e, value);
   };
 
   for (let j = vertAxis.length - 1; j >= 0; j--) {

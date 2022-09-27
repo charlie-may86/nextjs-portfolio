@@ -1,17 +1,18 @@
-const squareClick = (e, square, value) => {
-  console.log(value);
-  if (
-    e.target.className.slice(0, 2) === square &&
-    value.count < value.gameCount
-  ) {
+import { useAnswerContext } from "../../../context/AnswerContext";
+
+const squareClick = (e, square) => {
+  const { count, gameCount, handleAnswer, chessGameClick, handleCount } =
+    useAnswerContext;
+  console.log("this is the props test");
+  if (e.target.className.slice(0, 2) === square && count < gameCount) {
     console.log(`${e.target.className.slice(0, 2)} equals ${square}`);
-    value.handleAnswer();
-    value.chessGameClick();
-    value.handleCount(1);
+    handleAnswer();
+    chessGameClick();
+    handleCount(1);
   } else if (e.target.className.slice(0, 2) === square) {
     console.log(`${e.target.className.slice(0, 2)} equals ${square}`);
-    value.handleAnswer(true);
-    value.handleCount(-value.gameCount);
+    handleAnswer(true);
+    handleCount(-gameCount);
   } else {
     console.log(`${e.target.className.slice(0, 2)} does not equal ${square}`);
   }
