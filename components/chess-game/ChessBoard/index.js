@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import SquareContext from "../../../context/SquareContext";
-import AnswerContext from "../../../context/AnswerContext";
+import {useAnswerContext} from "../../../context/AnswerContext";
 import squareClick from "../logic/SquareClick";
+import styles from "./ChessBoard.module.css";
 
 const ChessBoard = () => {
   const horzAxis = ["A", "B", "C", "D", "E", "F", "G", "H"];
@@ -9,11 +10,11 @@ const ChessBoard = () => {
 
   let board = [];
 
-  const whichSquare = useContext(SquareContext);
-  const value = useContext(AnswerContext);
+  //   const whichSquare = useContext(SquareContext);
+  const { handleThis } = useAnswerContext();
 
   const handleClick = (e) => {
-    squareClick(e, whichSquare, value);
+    squareClick(e,whichSquare, value, handleClick);
   };
 
   for (let j = vertAxis.length - 1; j >= 0; j--) {
@@ -23,7 +24,7 @@ const ChessBoard = () => {
       if (num % 2 === 0) {
         board.push(
           <div
-            className={`${horzAxis[i]}${vertAxis[j]} black-tile`}
+            className={`${horzAxis[i]}${vertAxis[j]} ${styles.blackTile}`}
             onClick={handleClick}
             key={`${horzAxis[i]}${vertAxis[j]}`}
           >
@@ -34,7 +35,7 @@ const ChessBoard = () => {
       } else {
         board.push(
           <div
-            className={`${horzAxis[i]}${vertAxis[j]} white-tile`}
+            className={`${horzAxis[i]}${vertAxis[j]} ${styles.whiteTile}`}
             onClick={handleClick}
             key={`${horzAxis[i]}${vertAxis[j]}`}
           >
@@ -46,7 +47,7 @@ const ChessBoard = () => {
     }
   }
 
-  return <div id="chessboard">{board}</div>;
+  return <div id={styles.chessboard}>{board}</div>;
 };
 
 export default ChessBoard;
