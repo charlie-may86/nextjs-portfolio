@@ -20,7 +20,7 @@ const NebPickEm = () => {
             <div>opponent</div>
             <div>time</div>
             <div>Point Spread</div>
-            <div>Pick em'!</div>
+            <div>Pick em!</div>
           </div>
           {myData.map((x) => {
             return (

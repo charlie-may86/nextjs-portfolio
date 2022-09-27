@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
-import SquareContext from '../../../context/SquareContext'
+import SquareContext from "../../../context/SquareContext";
+import AnswerContext from "../../../context/AnswerContext";
+import squareClick from "../logic/SquareClick";
 
 const ChessBoard = () => {
   const horzAxis = ["A", "B", "C", "D", "E", "F", "G", "H"];
