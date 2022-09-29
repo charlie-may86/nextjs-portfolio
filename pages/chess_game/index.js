@@ -1,10 +1,16 @@
 import { AnswerContextProvider } from "../../context/AnswerContext";
 import ChessBoard from "../../components/chess-game/ChessBoard";
+import GameButtons from "../../components/chess-game/GameButtons";
 
 const ChessGame = () => {
   return (
     <AnswerContextProvider>
-      <ChessBoard />
+      <div>
+        <ChessBoard />
+      </div>
+      <div>
+        <GameButtons />
+      </div>
     </AnswerContextProvider>
   );
 };

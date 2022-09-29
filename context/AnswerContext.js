@@ -53,7 +53,8 @@ export const AnswerContextProvider = ({ children }) => {
         gameCount,
         handleGameCount,
         setTotalTime,
-        contextTest
+        contextTest,
+        square
       }}
     >
       {children}
