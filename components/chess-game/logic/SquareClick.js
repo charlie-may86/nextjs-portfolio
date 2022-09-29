@@ -1,8 +1,9 @@
 import { useAnswerContext } from "../../../context/AnswerContext";
 
+const value = useAnswerContext()
+
 const squareClick = (e, square) => {
-  const { count, gameCount, handleAnswer, chessGameClick, handleCount } =
-    useAnswerContext;
+  const value = useAnswerContext()
   console.log("this is the props test");
   if (e.target.className.slice(0, 2) === square && count < gameCount) {
     console.log(`${e.target.className.slice(0, 2)} equals ${square}`);

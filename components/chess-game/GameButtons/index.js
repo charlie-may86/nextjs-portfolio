@@ -1,9 +1,9 @@
 import React from "react";
-import {useAnswerContext} from '../../../context/AnswerContext'
-import SubmitTime from '../SubmitTime'
+import { useAnswerContext } from "../../../context/AnswerContext";
+import SubmitTime from "../SubmitTime";
 
 const GameButtons = () => {
-  const value = useAnswerContext()
+  const value = useAnswerContext();
   // console.log('this is the game count: ', value.gameCount);
 
   // const [totalTime, setTotalTime] = useState(value.totalTime)
@@ -18,6 +18,8 @@ const GameButtons = () => {
       <button onClick={() => value.chessGameClick()}>
         {value.count === 0 ? "start" : "stop"}
       </button>
+      <div>{value.count === 0 ? "" : value.square}</div>
+      <div>{value.totalTime === 0 ? "" : value.totalTime}</div>
       <div>{value.totalTime === 0 ? "" : value.totalTime}</div>
       <div>{value.totalTime === 0 ? "" : <SubmitTime />}</div>
     </div>

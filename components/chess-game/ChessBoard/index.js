@@ -13,8 +13,8 @@ const ChessBoard = () => {
   //   const whichSquare = useContext(SquareContext);
   const value = useAnswerContext();
 
-  const handleClick = () => {
-    console.log(value);
+  const handleClick = (e) => {
+    squareClick(e, value.square, value);
   };
 
   for (let j = vertAxis.length - 1; j >= 0; j--) {
