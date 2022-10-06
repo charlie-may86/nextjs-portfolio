@@ -1,12 +1,13 @@
 import React from "react";
-import SquareContext from "../../../context/SquareContext";
+
 import { useAnswerContext } from "../../../context/AnswerContext";
-import squareClick from "../logic/SquareClick";
+import useSquareClick from "../logic/SquareClick";
 import styles from "./ChessBoard.module.css";
 
 const ChessBoard = () => {
   const horzAxis = ["A", "B", "C", "D", "E", "F", "G", "H"];
   const vertAxis = ["1", "2", "3", "4", "5", "6", "7", "8"];
+  const { handleSquareClick } = useSquareClick();
 
   let board = [];
 
@@ -14,7 +15,7 @@ const ChessBoard = () => {
   const value = useAnswerContext();
 
   const handleClick = (e) => {
-    squareClick(e, value.square, value);
+    handleSquareClick(e, value.square, value);
   };
 
   for (let j = vertAxis.length - 1; j >= 0; j--) {
