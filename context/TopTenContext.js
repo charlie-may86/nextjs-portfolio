@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const TopTenContext = createContext();
 
-const TopTenProvider = ({ children }) => {
+export const TopTenProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [topTen, setTopTen] = useState(null);
 
@@ -39,4 +39,4 @@ const TopTenProvider = ({ children }) => {
 };
 
 export const useTopTen = () => useContext(TopTenContext);
-export default TopTenProvider;
+

@@ -1,16 +1,17 @@
 import React, { useState, useContext } from "react";
-import AnswerContext from '../../../context/AnswerContext'
+
 import axios from "axios";
 import { useTopTen } from "../../../context/TopTenContext";
+import { useAnswerContext } from "../../../context/AnswerContext";
 
 const SubmitTime = () => {
-  const answer = useContext(AnswerContext);
+  const { totalTime, gameCount, setTotalTime } = useAnswerContext();
   const { getTopTen } = useTopTen();
 
   const [newTime, setNewTime] = useState({
     username: "",
-    time: answer.totalTime,
-    game_length: answer.gameCount,
+    time: totalTime,
+    game_length: gameCount,
   });
 
   const handleIntials = (e) => {
@@ -31,7 +32,7 @@ const SubmitTime = () => {
       .catch((err) => {
         console.log(err);
       });
-    answer.setTotalTime(0);
+    setTotalTime(0);
   };
 
   return (
