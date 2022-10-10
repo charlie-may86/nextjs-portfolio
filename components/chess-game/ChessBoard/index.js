@@ -25,7 +25,7 @@ const ChessBoard = () => {
       if (num % 2 === 0) {
         board.push(
           <div
-            className={`${horzAxis[i]}${vertAxis[j]} ${styles.blackTile}`}
+            className={`${horzAxis[i]}${vertAxis[j]} ${styles.tile} ${styles.blackTile}`}
             onClick={handleClick}
             key={`${horzAxis[i]}${vertAxis[j]}`}
           >
@@ -36,7 +36,7 @@ const ChessBoard = () => {
       } else {
         board.push(
           <div
-            className={`${horzAxis[i]}${vertAxis[j]} ${styles.whiteTile}`}
+            className={`${horzAxis[i]}${vertAxis[j]} ${styles.tile} ${styles.whiteTile}`}
             onClick={handleClick}
             key={`${horzAxis[i]}${vertAxis[j]}`}
           >
