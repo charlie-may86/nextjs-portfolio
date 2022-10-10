@@ -9,7 +9,7 @@ const TopTen = () => {
     return <div>loading</div>;
   } else {
     return (
-      <div className="topTen">
+      <div className={styles.TopTenContainer}>
         <div>All Time Greatest</div>
         {topTen.map((x) => {
           return (

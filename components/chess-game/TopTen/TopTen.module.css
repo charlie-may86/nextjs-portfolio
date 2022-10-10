@@ -9,3 +9,7 @@
   .topTenRow:nth-child(even) {
     background-color: lightgray;
   }
+
+  .TopTenContainer {
+    margin: 1% 40%
+  }

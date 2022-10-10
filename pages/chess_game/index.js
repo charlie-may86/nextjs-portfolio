@@ -9,9 +9,11 @@ const ChessGame = () => {
   return (
     <AnswerContextProvider>
       <TopTenProvider>
-        <div className={styles.gameArea}>
+        <div className={styles.GameArea}>
           <ChessBoard />
           <GameButtons />
+        </div>
+        <div className={styles.TopTenArea}>
           <TopTen />
         </div>
       </TopTenProvider>
