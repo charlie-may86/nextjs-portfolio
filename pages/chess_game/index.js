@@ -12,8 +12,6 @@ const ChessGame = () => {
         <div className={styles.GameArea}>
           <ChessBoard />
           <GameButtons />
-        </div>
-        <div className={styles.TopTenArea}>
           <TopTen />
         </div>
       </TopTenProvider>
