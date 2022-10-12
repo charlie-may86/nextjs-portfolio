@@ -11,7 +11,7 @@ export const TopTenProvider = ({ children }) => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        "http://localhost:9000/api/chess/white/eight"
+        "https://charlie-portfolio-backend.herokuapp.com/api/chess/white/eight"
       );
       setTopTen(response.data);
     } catch (error) {

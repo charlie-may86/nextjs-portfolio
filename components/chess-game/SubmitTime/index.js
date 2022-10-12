@@ -24,7 +24,7 @@ const SubmitTime = () => {
   const submitTime = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:9000/api/chess", newTime)
+      .post("https://charlie-portfolio-backend.herokuapp.com/api/chess", newTime)
       .then((res) => {
         console.log(res);
         getTopTen();
