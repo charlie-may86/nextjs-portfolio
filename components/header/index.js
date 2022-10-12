@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -8,9 +9,9 @@ const Header = () => {
         <h1>Charlie May</h1>
       </div>
       <div className={styles.headerNav}>
-        <a href="http://localhost:3000/cv">CV</a>
-        <a href="http://localhost:3000/chess_game">Chess Game</a>
-        <a href="http://localhost:3000/cfb_pick_em">CFB Pickem</a>
+        <Link href="/cv">CV</Link>
+        <Link href="/chess_game">Chess Game</Link>
+        <Link href="/cfb_pick_em">CFB Pickem</Link>
         <a href="https://github.com/charlie-may86">GitHub</a>
       </div>
     </header>
