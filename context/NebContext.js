@@ -34,7 +34,7 @@ export const NebContextProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/cfb")
+      .get("https://charlie-portfolio-backend.herokuapp.com/api/cfb")
       .then((res) => {
         setmyData(
           res.data.filter((x) => x.HomeTeam === "NEBR" || x.AwayTeam === "NEBR")
