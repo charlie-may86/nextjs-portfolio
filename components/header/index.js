@@ -12,8 +12,20 @@ const Header = () => {
         <Link href="/cv">CV</Link>
         <Link href="/chess_game">Chess Game</Link>
         <Link href="/cfb_pick_em">CFB Pickem</Link>
-        <a href="https://github.com/charlie-may86">GitHub</a>
-        <a href="https://trello.com/b/wd7Jy3Xu/portfolio">To Do</a>
+        <a
+          href="https://github.com/charlie-may86"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://trello.com/b/wd7Jy3Xu/portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          To Do
+        </a>
       </div>
     </header>
   );
