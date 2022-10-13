@@ -5,7 +5,7 @@ import NebPickEm from "../../components/cfb-pickem/neb-pickem";
 const CfbPickEm = () => {
   return (
     <NebContextProvider>
-      <h1>This is cfb pickem app</h1>
+      <h1>Nebraska Football Pick em Challenge</h1>
       <SubmitPicks />
       <NebPickEm />
     </NebContextProvider>
