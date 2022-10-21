@@ -12,7 +12,7 @@
 
 @media (max-width: 890px) {
   .TopTenContainer {
-    margin: 5% 30%;
+    margin: 0 30%;
   }
   .TopTenTitle {
     text-align: center;
