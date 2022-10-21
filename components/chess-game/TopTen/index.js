@@ -1,6 +1,6 @@
 import React from "react";
 import { useTopTen } from "../../../context/TopTenContext";
-import styles from './TopTen.module.css'
+import styles from "./TopTen.module.css";
 
 const TopTen = () => {
   const { topTen, isLoading } = useTopTen();
@@ -10,7 +10,7 @@ const TopTen = () => {
   } else {
     return (
       <div className={styles.TopTenContainer}>
-        <div>All Time Greatest</div>
+        <div className={styles.TopTenTitle}>All Time Greatest</div>
         {topTen.map((x) => {
           return (
             <div className={styles.topTenRow} key={x.result_id}>

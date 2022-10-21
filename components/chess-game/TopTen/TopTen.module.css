@@ -1,12 +1,20 @@
 .topTenRow {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .topTenRow .name {
-    text-transform: uppercase;
-  }
-  .topTenRow:nth-child(even) {
-    background-color: lightgray;
-  }
+  display: flex;
+  justify-content: space-evenly;
+}
 
+.topTenRow .name {
+  text-transform: uppercase;
+}
+.topTenRow:nth-child(even) {
+  background-color: lightgray;
+}
+
+@media (max-width: 890px) {
+  .TopTenContainer {
+    margin: 5% 30%;
+  }
+  .TopTenTitle {
+    text-align: center;
+  }
+}

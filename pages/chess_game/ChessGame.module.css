@@ -1,12 +1,11 @@
-
 .GameArea {
-    display: flex;
-    margin: 1% 15%;
-  }
+  display: flex;
+  margin: 1% 15%;
+}
 
-  @media (max-width: 890px) {
-    .GameArea {
-      display: flex;
-      flex-direction: column;
-    }
+@media (max-width: 890px) {
+  .GameArea {
+    display: flex;
+    flex-direction: column;
   }
+}
