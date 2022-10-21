@@ -5,6 +5,7 @@
 
 .topTenRow .name {
   text-transform: uppercase;
+  text-align: center;
 }
 .topTenRow:nth-child(even) {
   background-color: lightgray;
