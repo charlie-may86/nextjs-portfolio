@@ -32,7 +32,7 @@ const Header = () => {
       </div>
       <div className={styles.dropdown}>
         <button className={styles.link}>
-          <FontAwesomeIcon icon={faBars} className={styles.navDropDown} />
+          Links
         </button>
         <div className={styles.dropdown_menu}>
         <ul>
